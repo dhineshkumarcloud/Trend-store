@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/dhineshkumarcloud/Trend-store.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t trend-store .'
